@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* Take border-box of the body and inherit to the universally selected elements */
+}
+
+html {
+  /* Defines what 1rem is*/
+  /* font-size: 10px; For people that need to increase the font size in order to read the page, pixels are not recommended */
+  font-size: 62.5%; /* % of the default 16px to get 10px*/
+}
+
+body {
+  box-sizing: border-box;
+}

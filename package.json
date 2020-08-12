@@ -1,0 +1,22 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Landing page for starter",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghevi/Destiny-Layout.git"
+  },
+  "author": "Ghevi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ghevi/Destiny-Layout/issues"
+  },
+  "homepage": "https://github.com/Ghevi/Destiny-Layout#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
