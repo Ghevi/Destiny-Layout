@@ -10,7 +10,7 @@
   background-position: top;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
     position: absolute;
@@ -27,9 +27,5 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  &__btn {
-    text-align: center;
   }
 }
