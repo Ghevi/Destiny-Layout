@@ -149,15 +149,18 @@
         font-size: 1.5rem;
         text-transform: uppercase;
         padding: 1rem;
-        color: $color-grey-light-1;
         border-radius: 2px;
 
         // &:not(:last-child) {
         //   border-bottom: 1px solid $color-grey-light-2;
         // }
 
+        &:not(:first-child) {
+          color: $color-grey-light-1;
+        }
+
         &:not(:last-child) {
-           margin-bottom: 0.5rem;
+          margin-bottom: 0.5rem;
         }
 
         &.solar {
