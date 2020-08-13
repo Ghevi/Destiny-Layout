@@ -166,8 +166,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.2rem;
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#10bcf0), to(#284db4));
-  background-image: linear-gradient(to right, #10bcf0, #284db4);
+  background-image: -webkit-gradient(linear, left top, right top, from(#10bcf0), to(#6A8ADF));
+  background-image: linear-gradient(to right, #10bcf0, #6A8ADF);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -215,6 +215,14 @@ body {
   margin-top: 4rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -256,6 +264,15 @@ body {
   background-color: #fff;
 }
 
+.btn--blue {
+  background-color: #3DA5ED;
+  color: #fff;
+}
+
+.btn--blue::after {
+  background-color: #3DA5ED;
+}
+
 .btn::after {
   content: '';
   display: inline-block;
@@ -279,17 +296,17 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #4dbde9;
+  color: #3DA5ED;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #4dbde9;
+  border-bottom: 1px solid #3DA5ED;
   padding: 3px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .btn-text:hover {
-  background-color: #4dbde9;
+  background-color: #3DA5ED;
   color: #fff;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -336,7 +353,7 @@ body {
 }
 
 .composition__photo:hover {
-  outline: 1.5rem solid #4dbde9;
+  outline: 1.5rem solid #3DA5ED;
   -webkit-transform: scale(1.05) translateY(-0.5rem);
           transform: scale(1.05) translateY(-0.5rem);
   -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
@@ -371,8 +388,8 @@ body {
   font-size: 6rem;
   margin-bottom: 0.5rem;
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#10bcf0), to(#284db4));
-  background-image: linear-gradient(to right, #10bcf0, #284db4);
+  background-image: -webkit-gradient(linear, left top, right top, from(#10bcf0), to(#6A8ADF));
+  background-image: linear-gradient(to right, #10bcf0, #6A8ADF);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -387,35 +404,174 @@ body {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
 }
 
 .card__side {
-  background-color: orangered;
-  color: #fff;
-  font-size: 2rem;
   height: 50rem;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
 .card__side--front {
-  background-color: orangered;
+  background-color: #fff;
 }
 
 .card__side--back {
-  background-color: green;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
+.card__side--back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#10bcf0), to(#6A8ADF));
+  background-image: linear-gradient(to right bottom, #10bcf0, #6A8ADF);
+}
+
+.card__side--back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffe600), to(#df8005));
+  background-image: linear-gradient(to right bottom, #ffe600, #df8005);
+}
+
+.card__side--back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f00606), to(#ac0202));
+  background-image: linear-gradient(to right bottom, #f00606, #ac0202);
+}
+
 .card:hover .card__side--front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
 .card:hover .card__side--back {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
+}
+
+.card__picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: soft-light;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.card__picture--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#10bcf0), to(#6A8ADF)), url(../img/imgDestiny/destiny-hunter-large.jpg);
+  background-image: linear-gradient(to right bottom, #10bcf0, #6A8ADF), url(../img/imgDestiny/destiny-hunter-large.jpg);
+}
+
+.card__picture--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffe600), to(#df8005)), url(../img/imgDestiny/destiny-warlock-large.jpg);
+  background-image: linear-gradient(to right bottom, #ffe600, #df8005), url(../img/imgDestiny/destiny-warlock-large.jpg);
+}
+
+.card__picture--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f00606), to(#ac0202)), url(../img/imgDestiny/destiny-titan-large.jpg);
+  background-image: linear-gradient(to right bottom, #f00606, #ac0202), url(../img/imgDestiny/destiny-titan-large.jpg);
+}
+
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 16.5rem;
+  right: 2rem;
+}
+
+.card__heading-span {
+  padding: 1rem 1.5rem;
+}
+
+.card__heading-span--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(16, 188, 240, 0.85)), to(rgba(106, 138, 223, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(16, 188, 240, 0.85), rgba(106, 138, 223, 0.85));
+}
+
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 230, 0, 0.85)), to(rgba(223, 128, 5, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(255, 230, 0, 0.85), rgba(223, 128, 5, 0.85));
+}
+
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(240, 6, 6, 0.8)), to(rgba(172, 2, 2, 0.8)));
+  background-image: linear-gradient(to right bottom, rgba(240, 6, 6, 0.8), rgba(172, 2, 2, 0.8));
+}
+
+.card__details {
+  padding-top: 5rem;
+}
+
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  color: #f7f7f7;
+  border-radius: 2px;
+}
+
+.card__details ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.card__details ul li.solar {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 230, 0, 0.3)), to(rgba(223, 128, 5, 0.9)));
+  background-image: linear-gradient(to right, rgba(255, 230, 0, 0.3), rgba(223, 128, 5, 0.9));
+}
+
+.card__details ul li.void {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(91, 46, 173, 0.3)), to(rgba(56, 1, 158, 0.8)));
+  background-image: linear-gradient(to right, rgba(91, 46, 173, 0.3), rgba(56, 1, 158, 0.8));
+}
+
+.card__details ul li.arc {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(16, 188, 240, 0.3)), to(#3da5ed));
+  background-image: linear-gradient(to right, rgba(16, 188, 240, 0.3), #3da5ed);
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+
+.card__motto-box {
+  color: #fff;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card__motto-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  padding-bottom: 4rem;
 }
 
 .row {
@@ -467,13 +623,13 @@ body {
 
 .header {
   height: 95vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(16, 188, 240, 0.75)), to(rgba(40, 77, 180, 0.75))), url(../img/imgDestiny/destiny-background.jpg);
-  background-image: linear-gradient(to right bottom, rgba(16, 188, 240, 0.75), rgba(40, 77, 180, 0.75)), url(../img/imgDestiny/destiny-background.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(16, 188, 240, 0.75)), to(rgba(106, 138, 223, 0.75))), url(../img/imgDestiny/destiny-background.jpg);
+  background-image: linear-gradient(to right bottom, rgba(16, 188, 240, 0.75), rgba(106, 138, 223, 0.75)), url(../img/imgDestiny/destiny-background.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .header__logo-box {
@@ -502,8 +658,8 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(16, 188, 240, 0.75)), to(rgba(40, 77, 180, 0.75))), url(../img/imgDestiny/destiny-pyramids.jpg);
-  background-image: linear-gradient(to right bottom, rgba(16, 188, 240, 0.75), rgba(40, 77, 180, 0.75)), url(../img/imgDestiny/destiny-pyramids.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(16, 188, 240, 0.75)), to(rgba(106, 138, 223, 0.75))), url(../img/imgDestiny/destiny-pyramids.jpg);
+  background-image: linear-gradient(to right bottom, rgba(16, 188, 240, 0.75), rgba(106, 138, 223, 0.75)), url(../img/imgDestiny/destiny-pyramids.jpg);
   margin-top: -13rem;
   background-size: cover;
   -webkit-transform: skewY(-7deg);
@@ -517,7 +673,7 @@ body {
 
 .section-classes {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -12rem;
 }
 /*# sourceMappingURL=main.css.map */
