@@ -223,6 +223,24 @@ body {
   margin-top: 10rem;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -319,85 +337,6 @@ body {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(0);
           transform: translateY(0);
-}
-
-.composition {
-  position: relative;
-}
-
-.composition__photo {
-  width: 60%;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-  border-radius: 2px;
-  position: absolute;
-  z-index: 10;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  outline-offset: 2rem;
-}
-
-.composition__photo--p1 {
-  left: 0;
-  top: -1rem;
-}
-
-.composition__photo--p2 {
-  right: -10%;
-  top: 3rem;
-}
-
-.composition__photo--p3 {
-  left: 20%;
-  top: 10rem;
-}
-
-.composition__photo:hover {
-  outline: 1.5rem solid #3DA5ED;
-  -webkit-transform: scale(1.05) translateY(-0.5rem);
-          transform: scale(1.05) translateY(-0.5rem);
-  -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-  z-index: 20;
-}
-
-.composition:hover .composition__photo:not(:hover) {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
-.feature-box {
-  background-color: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  text-align: center;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.feature-box:not(:last-child) {
-  margin-right: 6rem;
-}
-
-.feature-box__icon {
-  font-size: 6rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#10bcf0), to(#6A8ADF));
-  background-image: linear-gradient(to right, #10bcf0, #6A8ADF);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.feature-box:hover {
-  -webkit-transform: translateY(-1.5rem) scale(1.03);
-          transform: translateY(-1.5rem) scale(1.03);
 }
 
 .card {
@@ -577,6 +516,156 @@ body {
   padding-bottom: 4rem;
 }
 
+.composition {
+  position: relative;
+}
+
+.composition__photo {
+  width: 60%;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+
+.composition__photo--p1 {
+  left: 0;
+  top: -1rem;
+}
+
+.composition__photo--p2 {
+  right: -10%;
+  top: 3rem;
+}
+
+.composition__photo--p3 {
+  left: 20%;
+  top: 10rem;
+}
+
+.composition__photo:hover {
+  outline: 1.5rem solid #3DA5ED;
+  -webkit-transform: scale(1.05) translateY(-0.5rem);
+          transform: scale(1.05) translateY(-0.5rem);
+  -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.feature-box:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.feature-box__icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#10bcf0), to(#6A8ADF));
+  background-image: linear-gradient(to right, #10bcf0, #6A8ADF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feature-box:hover {
+  -webkit-transform: translateY(-1.5rem) scale(1.03);
+          transform: translateY(-1.5rem) scale(1.03);
+}
+
+.god {
+  width: 75%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+}
+
+.god__shape {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem) skewX(12deg);
+          transform: translateX(-3rem) skewX(12deg);
+  position: relative;
+}
+
+.god__img {
+  height: 100%;
+  -webkit-transform: translate(-0.3rem, 1rem) scale(1.2);
+          transform: translate(-0.3rem, 1rem) scale(1.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.god__text {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
+.god__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.god:hover .god__caption {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.god:hover .god__img {
+  -webkit-transform: translateX(-0.5rem) scale(1);
+          transform: translateX(-0.5rem) scale(1);
+  -webkit-filter: blur(3px) brightness(80%);
+          filter: blur(3px) brightness(80%);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -678,5 +767,10 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -12rem;
+}
+
+.section-gods {
+  position: relative;
+  padding: 15rem 0;
 }
 /*# sourceMappingURL=main.css.map */
