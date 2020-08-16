@@ -1,3 +1,18 @@
+/*
+0 - 600px:        Phone
+600 - 900px:      Tablet portrait
+900 - 1200px:     Tablet landscape
+[1200-1800px ]:   Normal styles with desktop first
+1800px +:         Big Desktop
+
+$breakpoint arguments:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16 px. Media queries are not affected by the base font size we set so rem fails here
+*/
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -14,7 +29,6 @@
             transform: translate(0);
   }
 }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -107,6 +121,24 @@ html {
   /* font-size: 10px; For people that need to increase the font size in order to read the page, pixels are not recommended */
   font-size: 62.5%;
   /* % of the default 16px to get 10px*/
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -728,6 +760,7 @@ body {
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1;
+  border-radius: 50%;
 }
 
 .god {

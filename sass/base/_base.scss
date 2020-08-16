@@ -10,6 +10,25 @@ html {
   /* Defines what 1rem is*/
   /* font-size: 10px; For people that need to increase the font size in order to read the page, pixels are not recommended */
   font-size: 62.5%; /* % of the default 16px to get 10px*/
+
+  // width < 1200 ?
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem == 9px, 9/16 = 56.25%
+  }
+
+  // width < 900 ?
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem == 8px, 8/16 = 50%
+  }
+
+  // width < 600 ? this is superfluos
+  // @include respond(phone) {
+  //   font-size: 30%; // 1rem == 4.8px
+  // }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem == 12px, 12/16 = 75%
+  }
 }
 
 body {

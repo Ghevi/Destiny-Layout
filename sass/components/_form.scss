@@ -95,5 +95,6 @@
 
   &__radio-input:checked ~ &__radio-label &__radio-button::after {
     opacity: 1;
+    border-radius: 50%;
   }
 }
