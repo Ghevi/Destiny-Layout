@@ -74,6 +74,14 @@ body {
       $color-secondary-dark
     );
   }
+
+  &--red {
+    background-image: linear-gradient(
+      to right,
+      $color-tertiary-light,
+      $color-tertiary-dark
+    );
+  }
 }
 
 .heading-tertiary {

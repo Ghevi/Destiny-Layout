@@ -29,13 +29,17 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="" class="navigation__link"><span>01</span> About Destiny</a>
+            <a href="" class="navigation__link"
+              ><span>01</span> About Destiny</a
+            >
           </li>
           <li class="navigation__item">
             <a href="" class="navigation__link"><span>02</span>Alien species</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link"><span>03</span>Discover Classes</a>
+            <a href="" class="navigation__link"
+              ><span>03</span>Discover Classes</a
+            >
           </li>
           <li class="navigation__item">
             <a href="" class="navigation__link"><span>04</span>Known Gods</a>
@@ -47,7 +51,7 @@
       </nav>
     </div>
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__logo-box">
         <img
           src="./img/imgDestiny/destiny-logo-white.png"
@@ -62,7 +66,7 @@
         </h1>
 
         <div class="u-center-text">
-          <a href="#" class="btn btn--white btn--animated"
+          <a href="#section-classes" class="btn btn--white btn--animated"
             >Discover your Fate</a
           >
         </div>
@@ -180,7 +184,7 @@
         </div>
       </section>
 
-      <section class="section-classes">
+      <section class="section-classes" id="section-classes">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary heading-secondary--blue">
             Choose your path
@@ -218,7 +222,7 @@
                       daring and ingenuity is needed now more than ever."
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Become!</a>
+                  <a href="#popup--hunter" class="btn btn--white">Become!</a>
                 </div>
               </div>
             </div>
@@ -237,7 +241,7 @@
                 <div class="card__details">
                   <ul>
                     <li>Subclasses</li>
-                    <li class="solar">Sunsinger</li>
+                    <li class="solar">Dawnblade</li>
                     <li class="void">Voidwalker</li>
                     <li class="arc">Stormcaller</li>
                   </ul>
@@ -255,7 +259,7 @@
                       Age."
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Become!</a>
+                  <a href="#popup--warlock" class="btn btn--white">Become!</a>
                 </div>
               </div>
             </div>
@@ -275,7 +279,7 @@
                   <ul>
                     <li>Subclasses</li>
                     <li class="solar">Sunbreaker</li>
-                    <li class="void">Defender</li>
+                    <li class="void">Sentinel</li>
                     <li class="arc">Striker</li>
                   </ul>
                 </div>
@@ -292,7 +296,7 @@
                       merciless, but so are you."
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Become!</a>
+                  <a href="#popup--titan" class="btn btn--white">Become!</a>
                 </div>
               </div>
             </div>
@@ -503,12 +507,151 @@
       </div>
     </footer>
 
-    <div class="popup">
-      <div class="popup__content">
-        POPUP
+    <div class="popup--hunter" id="popup--hunter">
+      <div class="popup--hunter__content">
+        <div class="popup--hunter__left">
+          <img
+            src="img/imgDestiny/destiny-hunter-gunslinger.jpg"
+            alt="Gunslinger"
+            class="popup--hunter__img"
+          />
+          <img
+            src="img/imgDestiny/destiny-hunter-nightstalker.jpg"
+            alt="Nightstalker"
+            class="popup--hunter__img"
+          />
+          <img
+            src="img/imgDestiny/destiny-hunter-arcstrider.jpg"
+            alt="Arcstrider"
+            class="popup--hunter__img"
+          />
+        </div>
+        <div class="popup--hunter__right">
+          <a href="#section-classes" class="popup--hunter__close">&times;</a>
+          <h2
+            class="heading-secondary heading-secondary--blue u-margin-bottom-small"
+          >
+            Start the journey now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &ndash; The choice is definitive!
+          </h3>
+          <p class="popup--hunter__text">
+            "Our old worlds have grown feral - rabid beasts with teeth of rust
+            and ruin. But such beasts are meant to be tamed. Or broken." —
+            Through manipulation of the Traveler's energies, Hunters learned how
+            to survive in the wild, assassinate their prey, and reclaim lost
+            secrets of the Golden Age. They are daring scouts and stealthy
+            killers, experts with knives and precision weapons. Hunters blaze
+            their own trails and write their own laws. Though some fear them as
+            being dangerous, their bravery has saved many lives and led to many
+            discoveries dating back to the Golden Age. Among the culture of
+            Hunters, Hunters who become close friends are expected to take up
+            the cloaks of their fallen comrades to finish business that they
+            started.
+          </p>
+          <a href="#" class="btn btn--blue">I've choosen my Path!</a>
+        </div>
       </div>
     </div>
 
+    <div class="popup--warlock" id="popup--warlock">
+      <div class="popup--warlock__content">
+        <div class="popup--warlock__left">
+          <img
+            src="img/imgDestiny/destiny-warlock-dawnblade.jpg"
+            alt="Gunslinger"
+            class="popup--warlock__img"
+          />
+          <img
+            src="img/imgDestiny/destiny-warlock-voidwalker.jpg"
+            alt="Nightstalker"
+            class="popup--warlock__img"
+          />
+          <img
+            src="img/imgDestiny/destiny-warlock-stormcaller.jpg"
+            alt="Arcstrider"
+            class="popup--warlock__img"
+          />
+        </div>
+        <div class="popup--warlock__right">
+          <a href="#section-classes" class="popup--warlock__close">&times;</a>
+          <h2
+            class="heading-secondary heading-secondary--orange u-margin-bottom-small"
+          >
+            Start the journey now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &ndash; The choice is definitive!
+          </h3>
+          <p class="popup--warlock__text">
+            "Warlocks may be thinkers, but most I know can hold their own." —
+            Lord Shaxx Warlocks were the first to tap the power of the Traveler,
+            wielding its light as they ventured beyond the safety of the Wall.
+            They know each discovery offers new possibilities, and they have
+            devoted themselves to understanding the Traveler, its power, and how
+            to better channel that power. A Warlock mind is an arsenal of deadly
+            secrets, balanced between godhood and madness. On the battlefield,
+            those secrets can shatter reality itself. They search the frontier
+            to find a means to defeat the Darkness once and for all. Warlocks
+            are known for pushing the boundaries of knowledge, even into
+            dangerous territory. At least two warlocks, Toland, the Shattered
+            and Osiris, were exiled for studying the Hive and Vex too closely.
+            There also exists an order of warlocks called the Thanatonauts, who
+            take advantage of Guardians ability to resurrect themselves to
+            receive visions every time they die.
+          </p>
+          <a href="#" class="btn btn--orange">I've choosen my Path!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup--titan" id="popup--titan">
+      <div class="popup--titan__content">
+        <div class="popup--titan__left">
+          <img
+            src="img/imgDestiny/destiny-titan-sunbreaker.jpg"
+            alt="Gunslinger"
+            class="popup--titan__img"
+          />
+          <img
+            src="img/imgDestiny/destiny-titan-sentinel.jpg"
+            alt="Nightstalker"
+            class="popup--titan__img"
+          />
+          <img
+            src="img/imgDestiny/destiny-titan-striker.jpg"
+            alt="Arcstrider"
+            class="popup--titan__img"
+          />
+        </div>
+        <div class="popup--titan__right">
+          <a href="#section-classes" class="popup--titan__close">&times;</a>
+          <h2
+            class="heading-secondary heading-secondary--red u-margin-bottom-small"
+          >
+            Start the journey now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &ndash; The choice is definitive!
+          </h3>
+          <p class="popup--titan__text">
+            "Strive for honor. Stand for hope." — Grimoire description They are
+            equipped with suits of powered armor that boost their strength and
+            endurance. Titans utilize their strength and skill with firearms to
+            kill their enemies. Titans have long honed the Light of the
+            Traveler, passing these skills to each new generation of warrior.
+            Their strength gave birth to the City, and they have taken a blood
+            oath to ensure it will always stand strong. The Wall surrounding
+            the City was built by the first Titans, who also perished defending
+            it. Steadfast and suresighted, Titans face any challenge head-on,
+            serving as living, blunt force instruments of the Traveler’s
+            will.
+          </p>
+          <a href="#" class="btn btn--red">I've choosen my Path!</a>
+        </div>
+      </div>
+    </div>
 
     <!--
     <section class="grid-test">
