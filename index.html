@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
+    <script>
+      function closeNav() {
+        document.getElementById('navi-toggle').checked = false;
+      }
+    </script>
+
     <title>Destiny | A Universe to unfold</title>
   </head>
   <body>
@@ -29,23 +35,44 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="" class="navigation__link"
+            <a
+              href="#section-about"
+              class="navigation__link"
+              onclick="closeNav()"
               ><span>01</span> About Destiny</a
             >
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link"><span>02</span>Alien species</a>
+            <a
+              href="#section-features"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>02</span>Alien species</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link"
+            <a
+              href="#section-classes"
+              class="navigation__link"
+              onclick="closeNav()"
               ><span>03</span>Discover Classes</a
             >
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link"><span>04</span>Known Gods</a>
+            <a
+              href="#section-gods"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>04</span>Known Gods</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link"><span>05</span>Join now</a>
+            <a
+              href="#section-join"
+              class="navigation__link"
+              onclick="closeNav()"
+              ><span>05</span>Join now</a
+            >
           </li>
         </ul>
       </nav>
@@ -72,7 +99,7 @@
       </div>
     </header>
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-margin-top-medium">
           <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary heading-secondary--blue">
@@ -125,7 +152,7 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary heading-secondary--orange">
@@ -307,7 +334,7 @@
         </div>
       </section>
 
-      <section class="section-gods">
+      <section class="section-gods" id="section-gods">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/imgDestiny/destiny-video.mp4" type="video/mp4" />
@@ -382,75 +409,73 @@
         </div>
       </section>
 
-      <section>
-        <section class="section-join">
-          <div class="row">
-            <div class="join">
-              <div class="join__form">
-                <form action="#" class="form">
-                  <div class="u-margin-bottom-medium">
-                    <h2 class="heading-secondary heading-secondary--blue">
-                      Join the fight now
-                    </h2>
-                  </div>
+      <section class="section-join" id="section-join">
+        <div class="row">
+          <div class="join">
+            <div class="join__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary heading-secondary--blue">
+                    Join the fight now
+                  </h2>
+                </div>
 
-                  <div class="form__group">
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Username"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Username</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email address"
+                    id="mail"
+                    required
+                  />
+                  <label for="mail" class="form__label">Email</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
                     <input
-                      type="text"
-                      class="form__input"
-                      placeholder="Username"
-                      id="name"
-                      required
+                      type="radio"
+                      class="form__radio-input"
+                      id="normal"
+                      name="edition"
                     />
-                    <label for="name" class="form__label">Username</label>
+                    <label for="normal" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Normal Edition</label
+                    >
                   </div>
 
-                  <div class="form__group">
+                  <div class="form__radio-group">
                     <input
-                      type="email"
-                      class="form__input"
-                      placeholder="Email address"
-                      id="mail"
-                      required
+                      type="radio"
+                      class="form__radio-input"
+                      id="special"
+                      name="edition"
                     />
-                    <label for="mail" class="form__label">Email</label>
+                    <label for="special" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Special Edition</label
+                    >
                   </div>
-
-                  <div class="form__group u-margin-bottom-medium">
-                    <div class="form__radio-group">
-                      <input
-                        type="radio"
-                        class="form__radio-input"
-                        id="normal"
-                        name="edition"
-                      />
-                      <label for="normal" class="form__radio-label">
-                        <span class="form__radio-button"></span>
-                        Normal Edition</label
-                      >
-                    </div>
-
-                    <div class="form__radio-group">
-                      <input
-                        type="radio"
-                        class="form__radio-input"
-                        id="special"
-                        name="edition"
-                      />
-                      <label for="special" class="form__radio-label">
-                        <span class="form__radio-button"></span>
-                        Special Edition</label
-                      >
-                    </div>
-                  </div>
-                  <div class="form__group">
-                    <button class="btn btn--blue">Join &rarr;</button>
-                  </div>
-                </form>
-              </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--blue">Join &rarr;</button>
+                </div>
+              </form>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </main>
 
