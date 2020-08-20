@@ -81,7 +81,7 @@
     <header class="header" id="header">
       <div class="header__logo-box">
         <img
-          src="./img/imgDestiny/destiny-logo-white.png"
+          src="./img/imgDestiny/destiny-logo-white-2x.png"
           alt="Logo"
           class="header__logo"
         />
@@ -130,7 +130,42 @@
               <a href="#" class="btn-text">Learn more &rarr;</a>
             </div>
             <div class="col-1-of-2">
+              <!-- Density and resolution switching-->
               <div class="composition">
+                <img
+                  srcset="
+                    img/imgDestiny/destiny-pve-small.jpg  640w,
+                    img/imgDestiny/destiny-pve.jpg       1280w
+                  "
+                  sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                  alt="Photo 1"
+                  class="composition__photo composition__photo--p1"
+                  src="img/imgDestiny/destiny-pve.jpg"
+                />
+
+                <img
+                  srcset="
+                    img/imgDestiny/destiny-pvp-small.jpg  640w,
+                    img/imgDestiny/destiny-pvp.jpg       1280w
+                  "
+                  sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                  alt="Photo 2"
+                  class="composition__photo composition__photo--p2"
+                  src="img/imgDestiny/destiny-pvp.jpg"
+                />
+
+                <img
+                  srcset="
+                    img/imgDestiny/destiny-pvx-small.jpg  640w,
+                    img/imgDestiny/destiny-pvx.jpg       1280w
+                  "
+                  sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                  alt="Photo 3"
+                  class="composition__photo composition__photo--p3"
+                  src="img/imgDestiny/destiny-pvx.jpg"
+                />
+
+                <!-- 
                 <img
                   src="img/imgDestiny/destiny-pve.jpg"
                   alt="Photo 1"
@@ -146,6 +181,7 @@
                   alt="Photo 3"
                   class="composition__photo composition__photo--p3"
                 />
+                -->
               </div>
             </div>
           </div>
@@ -481,11 +517,25 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="img/imgDestiny/destiny-logo-white.png"
-          alt="Logo"
-          class="footer_logo"
-        />
+        <!-- Art direction and density switching-->
+        <picture class="footer__logo">
+          <!-- the source should use another couple of logos-->
+          <source
+            srcset="
+              img/imgDestiny/destiny-logo-white-1x.png 1x,
+              img/imgDestiny/destiny-logo-white-2x.png 2x
+            "
+            media="(max-width: 37.5rem)"
+          />
+          <img
+            srcset="
+              img/imgDestiny/destiny-logo-white-1x.png 1x,
+              img/imgDestiny/destiny-logo-white-2x.png 2x
+            "
+            alt="Logo"
+            src="img/imgDestiny/destiny-logo-white-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
